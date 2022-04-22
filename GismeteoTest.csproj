@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Shared\GismeteoTest.Database\GismeteoTest.Database.csproj" />
+    <ProjectReference Include="Shared\GismeteoTest.Shared\GismeteoTest.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
