@@ -3,12 +3,11 @@ using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace GismeteoTest.Database
 {
-    public class MongoDbWorker
+    public class DbWorker
     {
         public string ConnectionString { get; set; }
 
@@ -26,7 +25,7 @@ namespace GismeteoTest.Database
         /// Конструктор
         /// </summary>
         /// <param name="conn"></param>
-        public MongoDbWorker(string conn = "mongodb://localhost:27017")
+        public DbWorker(string conn = "mongodb://localhost:27017")
         {
             ConnectionString = conn;
             client = new MongoClient(ConnectionString);

@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\GismeteoTest.Database\GismeteoTest.Database.csproj" />
     <ProjectReference Include="..\..\Shared\GismeteoTest.Shared\GismeteoTest.Shared.csproj" />
   </ItemGroup>
 

@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="Shared\GismeteoTest.Database\GismeteoTest.Database.csproj" />
-    <ProjectReference Include="Shared\GismeteoTest.Shared\GismeteoTest.Shared.csproj" />
+    <ProjectReference Include="..\Shared\GismeteoTest.Database\GismeteoTest.Database.csproj" />
+    <ProjectReference Include="..\Shared\GismeteoTest.Shared\GismeteoTest.Shared.csproj" />
   </ItemGroup>
 
 </Project>

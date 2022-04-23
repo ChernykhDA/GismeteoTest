@@ -36,8 +36,6 @@ namespace GismeteoTest
             {
                 throw new Exception("Возникла ошибка при получении страницы с сайта.");
             }
-
-
         }
     }
 }

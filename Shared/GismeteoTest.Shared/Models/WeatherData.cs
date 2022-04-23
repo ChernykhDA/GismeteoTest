@@ -4,6 +4,7 @@ using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace GismeteoTest.Shared.Models
 {
@@ -24,6 +25,7 @@ namespace GismeteoTest.Shared.Models
 
     public class WeatherData
     {
+        [JsonIgnore]
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
