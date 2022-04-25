@@ -36,7 +36,7 @@ namespace GismeteoService.Controllers
 
                 var data = await db.GetWeatherByCity(city);
 
-                if (data == null || data.Count == 0)
+                if (data == null)
                 {
                     return new WeatherResponse()
                     {

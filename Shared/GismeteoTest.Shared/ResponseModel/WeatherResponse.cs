@@ -9,6 +9,6 @@ namespace GismeteoTest.Shared.ResponseModel
     {
         public ErrorResponse Error { get; set; }
 
-        public List<WeatherData> WeatherData { get; set; }
+        public WeatherData WeatherData { get; set; }
     }
 }

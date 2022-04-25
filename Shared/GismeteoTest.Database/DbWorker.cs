@@ -1,5 +1,6 @@
 ﻿using GismeteoTest.Shared.Models;
 using MongoDB.Bson;
+using System.Linq;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -76,6 +77,30 @@ namespace GismeteoTest.Database
         }
 
         /// <summary>
+        /// Метод добавляет список городов
+        /// </summary>
+        /// <param name="cities"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
+        public async Task AddCities(List<City> cities)
+        {
+            try
+            {
+                var database = client.GetDatabase(DbName);
+
+                var collection = database.GetCollection<City>("Cities");
+
+                await collection.DeleteManyAsync(Builders<City>.Filter.Empty);
+
+                await collection.InsertManyAsync(cities);
+            }
+            catch
+            {
+                throw new Exception("Возникла ошибка при добавлении информации о погоде");
+            }
+        }
+
+        /// <summary>
         /// Метод получения уникального списка городов
         /// </summary>
         /// <param name="name"></param>
@@ -86,10 +111,11 @@ namespace GismeteoTest.Database
             {
                 var database = client.GetDatabase(DbName);
 
-                var cities = await database.GetCollection<WeatherData>("Weathers").Distinct<string>("City", "").ToListAsync();
-                if(cities.Count == 0 || cities == null)
-                    throw new Exception("Нет данных о городах");
-                return cities;
+                var collection = (await database.GetCollection<City>("Cities")
+                    .FindAsync(_ => true)).ToList()
+                    .Select(x => x.Name).ToList();
+
+                return collection;
             }
             catch
             {
@@ -102,7 +128,7 @@ namespace GismeteoTest.Database
         /// </summary>
         /// <param name="city"></param>
         /// <returns></returns>
-        public async Task<List<WeatherData>> GetWeatherByCity(string city)
+        public async Task<WeatherData> GetWeatherByCity(string city)
         {
             try
             {
@@ -110,14 +136,13 @@ namespace GismeteoTest.Database
 
                 var filter = Builders<WeatherData>.Filter.Eq("City", city);
 
-                var weather = (await database.GetCollection<WeatherData>("Weathers")
-                    .FindAsync(filter).Result
-                    .FirstOrDefaultAsync());
+                var collection = (await database.GetCollection<WeatherData>("Weathers").FindAsync(filter))
+                    .ToList().OrderByDescending(x => x.UpdateTime).First();
 
-                if (weather == null)
+                if (collection == null)
                     throw new Exception("Не данны о погоде в городе");
 
-                return null;
+                return collection;
             }
             catch
             {

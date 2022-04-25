@@ -19,8 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GismeteoTest", "Console\Gis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GismeteoWinForms", "UserApps\GismeteoWinForms\GismeteoWinForms.csproj", "{B531852A-85D1-4943-8700-6621C85024EE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GismeteoTestBlazor", "UserApps\GismeteoTestBlazor\GismeteoTestBlazor.csproj", "{F7BBD4B6-C84E-47F1-83E1-74EB39B991C0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{B531852A-85D1-4943-8700-6621C85024EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B531852A-85D1-4943-8700-6621C85024EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B531852A-85D1-4943-8700-6621C85024EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7BBD4B6-C84E-47F1-83E1-74EB39B991C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7BBD4B6-C84E-47F1-83E1-74EB39B991C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7BBD4B6-C84E-47F1-83E1-74EB39B991C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7BBD4B6-C84E-47F1-83E1-74EB39B991C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,7 +54,6 @@ Global
 		{A55AC57F-5EA6-4550-9DCE-7B6EA785122E} = {E18764DE-55EE-4496-ACED-63667B58A0C6}
 		{17A8FCA0-296E-4C91-8A65-50653B88627B} = {E18764DE-55EE-4496-ACED-63667B58A0C6}
 		{B531852A-85D1-4943-8700-6621C85024EE} = {18230996-DA39-432F-99A8-80C619C504DB}
-		{F7BBD4B6-C84E-47F1-83E1-74EB39B991C0} = {18230996-DA39-432F-99A8-80C619C504DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {57E9ABD6-7068-4A3A-B895-712C63AFD5FF}

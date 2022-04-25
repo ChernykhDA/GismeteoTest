@@ -10,7 +10,7 @@ namespace GismeteoWinForms.Components
 {
     public partial class WeatherControl : UserControl
     {
-        private DateTime? _day { get; set; }
+        private string _day { get; set; }
 
         private double? _maxTemp;
 
@@ -18,14 +18,14 @@ namespace GismeteoWinForms.Components
         private double? _windSpeed { get; set; }
         private double? _precipitation { get; set; }
 
-        public DateTime? Day 
+        public string Day 
         { 
             get => _day;
             
             set
             {
                 if(value != default)
-                    _day = value.Value.Date;
+                    _day = value;
                 SetDate();
             }
         }
@@ -36,7 +36,7 @@ namespace GismeteoWinForms.Components
                 DataLabel.Text = "Не определено";
             else
             {
-                DataLabel.Text = (_day == null) ? "Не определено" : _day.ToString();
+                DataLabel.Text = (_day == null) ? "Не опр." : _day.ToString();
             }
         }
 
@@ -84,7 +84,7 @@ namespace GismeteoWinForms.Components
         {
             InitializeComponent();
 
-            DataLabel.Text = "Не определено";
+            DataLabel.Text = "Не опр.";
 
         }
     }

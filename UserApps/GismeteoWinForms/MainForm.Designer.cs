@@ -40,16 +40,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.weatherControl20 = new GismeteoWinForms.Components.WeatherControl();
-            this.weatherControl19 = new GismeteoWinForms.Components.WeatherControl();
-            this.weatherControl18 = new GismeteoWinForms.Components.WeatherControl();
-            this.weatherControl17 = new GismeteoWinForms.Components.WeatherControl();
-            this.weatherControl16 = new GismeteoWinForms.Components.WeatherControl();
-            this.weatherControl15 = new GismeteoWinForms.Components.WeatherControl();
-            this.weatherControl14 = new GismeteoWinForms.Components.WeatherControl();
-            this.weatherControl13 = new GismeteoWinForms.Components.WeatherControl();
-            this.weatherControl12 = new GismeteoWinForms.Components.WeatherControl();
-            this.weatherControl11 = new GismeteoWinForms.Components.WeatherControl();
+            this.weatherControl10 = new GismeteoWinForms.Components.WeatherControl();
+            this.weatherControl9 = new GismeteoWinForms.Components.WeatherControl();
+            this.weatherControl8 = new GismeteoWinForms.Components.WeatherControl();
+            this.weatherControl7 = new GismeteoWinForms.Components.WeatherControl();
+            this.weatherControl6 = new GismeteoWinForms.Components.WeatherControl();
+            this.weatherControl5 = new GismeteoWinForms.Components.WeatherControl();
+            this.weatherControl4 = new GismeteoWinForms.Components.WeatherControl();
+            this.weatherControl3 = new GismeteoWinForms.Components.WeatherControl();
+            this.weatherControl2 = new GismeteoWinForms.Components.WeatherControl();
+            this.weatherControl1 = new GismeteoWinForms.Components.WeatherControl();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             // TextUpdateTimeLabel
             // 
             this.TextUpdateTimeLabel.AutoSize = true;
-            this.TextUpdateTimeLabel.Location = new System.Drawing.Point(39, 11);
+            this.TextUpdateTimeLabel.Location = new System.Drawing.Point(86, 13);
             this.TextUpdateTimeLabel.Name = "TextUpdateTimeLabel";
             this.TextUpdateTimeLabel.Size = new System.Drawing.Size(184, 15);
             this.TextUpdateTimeLabel.TabIndex = 1;
@@ -67,8 +67,9 @@
             // 
             this.updateButton.Location = new System.Drawing.Point(5, 5);
             this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(28, 27);
+            this.updateButton.Size = new System.Drawing.Size(76, 27);
             this.updateButton.TabIndex = 2;
+            this.updateButton.Text = "Обновить";
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
@@ -76,11 +77,11 @@
             // 
             this.UpdateTime.AutoSize = true;
             this.UpdateTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UpdateTime.Location = new System.Drawing.Point(225, 7);
+            this.UpdateTime.Location = new System.Drawing.Point(272, 9);
             this.UpdateTime.Name = "UpdateTime";
-            this.UpdateTime.Size = new System.Drawing.Size(195, 21);
+            this.UpdateTime.Size = new System.Drawing.Size(16, 21);
             this.UpdateTime.TabIndex = 3;
-            this.UpdateTime.Text = "24 апреля 2022 г. 13 : 03";
+            this.UpdateTime.Text = "-";
             // 
             // panel2
             // 
@@ -112,6 +113,7 @@
             this.cityBox.Name = "cityBox";
             this.cityBox.Size = new System.Drawing.Size(285, 23);
             this.cityBox.TabIndex = 4;
+            this.cityBox.SelectedIndexChanged += new System.EventHandler(this.cityBox_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -121,16 +123,16 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.weatherControl20);
-            this.panel1.Controls.Add(this.weatherControl19);
-            this.panel1.Controls.Add(this.weatherControl18);
-            this.panel1.Controls.Add(this.weatherControl17);
-            this.panel1.Controls.Add(this.weatherControl16);
-            this.panel1.Controls.Add(this.weatherControl15);
-            this.panel1.Controls.Add(this.weatherControl14);
-            this.panel1.Controls.Add(this.weatherControl13);
-            this.panel1.Controls.Add(this.weatherControl12);
-            this.panel1.Controls.Add(this.weatherControl11);
+            this.panel1.Controls.Add(this.weatherControl10);
+            this.panel1.Controls.Add(this.weatherControl9);
+            this.panel1.Controls.Add(this.weatherControl8);
+            this.panel1.Controls.Add(this.weatherControl7);
+            this.panel1.Controls.Add(this.weatherControl6);
+            this.panel1.Controls.Add(this.weatherControl5);
+            this.panel1.Controls.Add(this.weatherControl4);
+            this.panel1.Controls.Add(this.weatherControl3);
+            this.panel1.Controls.Add(this.weatherControl2);
+            this.panel1.Controls.Add(this.weatherControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 38);
             this.panel1.Name = "panel1";
@@ -184,156 +186,156 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "День:";
             // 
-            // weatherControl20
+            // weatherControl10
             // 
-            this.weatherControl20.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.weatherControl20.Day = new System.DateTime(((long)(0)));
-            this.weatherControl20.Location = new System.Drawing.Point(992, 6);
-            this.weatherControl20.MaximumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl20.MaxTemperature = null;
-            this.weatherControl20.MinimumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl20.MinTemperature = null;
-            this.weatherControl20.Name = "weatherControl20";
-            this.weatherControl20.Precipitation = null;
-            this.weatherControl20.Size = new System.Drawing.Size(91, 302);
-            this.weatherControl20.TabIndex = 9;
-            this.weatherControl20.WindSpeed = null;
+            this.weatherControl10.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.weatherControl10.Day = null;
+            this.weatherControl10.Location = new System.Drawing.Point(992, 6);
+            this.weatherControl10.MaximumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl10.MaxTemperature = null;
+            this.weatherControl10.MinimumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl10.MinTemperature = null;
+            this.weatherControl10.Name = "weatherControl10";
+            this.weatherControl10.Precipitation = null;
+            this.weatherControl10.Size = new System.Drawing.Size(91, 302);
+            this.weatherControl10.TabIndex = 9;
+            this.weatherControl10.WindSpeed = null;
             // 
-            // weatherControl19
+            // weatherControl9
             // 
-            this.weatherControl19.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.weatherControl19.Day = new System.DateTime(((long)(0)));
-            this.weatherControl19.Location = new System.Drawing.Point(895, 6);
-            this.weatherControl19.MaximumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl19.MaxTemperature = null;
-            this.weatherControl19.MinimumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl19.MinTemperature = null;
-            this.weatherControl19.Name = "weatherControl19";
-            this.weatherControl19.Precipitation = null;
-            this.weatherControl19.Size = new System.Drawing.Size(91, 302);
-            this.weatherControl19.TabIndex = 8;
-            this.weatherControl19.WindSpeed = null;
+            this.weatherControl9.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.weatherControl9.Day = null;
+            this.weatherControl9.Location = new System.Drawing.Point(895, 6);
+            this.weatherControl9.MaximumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl9.MaxTemperature = null;
+            this.weatherControl9.MinimumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl9.MinTemperature = null;
+            this.weatherControl9.Name = "weatherControl9";
+            this.weatherControl9.Precipitation = null;
+            this.weatherControl9.Size = new System.Drawing.Size(91, 302);
+            this.weatherControl9.TabIndex = 8;
+            this.weatherControl9.WindSpeed = null;
             // 
-            // weatherControl18
+            // weatherControl8
             // 
-            this.weatherControl18.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.weatherControl18.Day = new System.DateTime(((long)(0)));
-            this.weatherControl18.Location = new System.Drawing.Point(798, 6);
-            this.weatherControl18.MaximumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl18.MaxTemperature = null;
-            this.weatherControl18.MinimumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl18.MinTemperature = null;
-            this.weatherControl18.Name = "weatherControl18";
-            this.weatherControl18.Precipitation = null;
-            this.weatherControl18.Size = new System.Drawing.Size(91, 302);
-            this.weatherControl18.TabIndex = 7;
-            this.weatherControl18.WindSpeed = null;
+            this.weatherControl8.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.weatherControl8.Day = null;
+            this.weatherControl8.Location = new System.Drawing.Point(798, 6);
+            this.weatherControl8.MaximumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl8.MaxTemperature = null;
+            this.weatherControl8.MinimumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl8.MinTemperature = null;
+            this.weatherControl8.Name = "weatherControl8";
+            this.weatherControl8.Precipitation = null;
+            this.weatherControl8.Size = new System.Drawing.Size(91, 302);
+            this.weatherControl8.TabIndex = 7;
+            this.weatherControl8.WindSpeed = null;
             // 
-            // weatherControl17
+            // weatherControl7
             // 
-            this.weatherControl17.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.weatherControl17.Day = new System.DateTime(((long)(0)));
-            this.weatherControl17.Location = new System.Drawing.Point(701, 6);
-            this.weatherControl17.MaximumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl17.MaxTemperature = null;
-            this.weatherControl17.MinimumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl17.MinTemperature = null;
-            this.weatherControl17.Name = "weatherControl17";
-            this.weatherControl17.Precipitation = null;
-            this.weatherControl17.Size = new System.Drawing.Size(91, 302);
-            this.weatherControl17.TabIndex = 6;
-            this.weatherControl17.WindSpeed = null;
+            this.weatherControl7.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.weatherControl7.Day = null;
+            this.weatherControl7.Location = new System.Drawing.Point(701, 6);
+            this.weatherControl7.MaximumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl7.MaxTemperature = null;
+            this.weatherControl7.MinimumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl7.MinTemperature = null;
+            this.weatherControl7.Name = "weatherControl7";
+            this.weatherControl7.Precipitation = null;
+            this.weatherControl7.Size = new System.Drawing.Size(91, 302);
+            this.weatherControl7.TabIndex = 6;
+            this.weatherControl7.WindSpeed = null;
             // 
-            // weatherControl16
+            // weatherControl6
             // 
-            this.weatherControl16.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.weatherControl16.Day = new System.DateTime(((long)(0)));
-            this.weatherControl16.Location = new System.Drawing.Point(604, 6);
-            this.weatherControl16.MaximumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl16.MaxTemperature = null;
-            this.weatherControl16.MinimumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl16.MinTemperature = null;
-            this.weatherControl16.Name = "weatherControl16";
-            this.weatherControl16.Precipitation = null;
-            this.weatherControl16.Size = new System.Drawing.Size(91, 302);
-            this.weatherControl16.TabIndex = 5;
-            this.weatherControl16.WindSpeed = null;
+            this.weatherControl6.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.weatherControl6.Day = null;
+            this.weatherControl6.Location = new System.Drawing.Point(604, 6);
+            this.weatherControl6.MaximumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl6.MaxTemperature = null;
+            this.weatherControl6.MinimumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl6.MinTemperature = null;
+            this.weatherControl6.Name = "weatherControl6";
+            this.weatherControl6.Precipitation = null;
+            this.weatherControl6.Size = new System.Drawing.Size(91, 302);
+            this.weatherControl6.TabIndex = 5;
+            this.weatherControl6.WindSpeed = null;
             // 
-            // weatherControl15
+            // weatherControl5
             // 
-            this.weatherControl15.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.weatherControl15.Day = new System.DateTime(((long)(0)));
-            this.weatherControl15.Location = new System.Drawing.Point(507, 6);
-            this.weatherControl15.MaximumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl15.MaxTemperature = null;
-            this.weatherControl15.MinimumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl15.MinTemperature = null;
-            this.weatherControl15.Name = "weatherControl15";
-            this.weatherControl15.Precipitation = null;
-            this.weatherControl15.Size = new System.Drawing.Size(91, 302);
-            this.weatherControl15.TabIndex = 4;
-            this.weatherControl15.WindSpeed = null;
+            this.weatherControl5.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.weatherControl5.Day = null;
+            this.weatherControl5.Location = new System.Drawing.Point(507, 6);
+            this.weatherControl5.MaximumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl5.MaxTemperature = null;
+            this.weatherControl5.MinimumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl5.MinTemperature = null;
+            this.weatherControl5.Name = "weatherControl5";
+            this.weatherControl5.Precipitation = null;
+            this.weatherControl5.Size = new System.Drawing.Size(91, 302);
+            this.weatherControl5.TabIndex = 4;
+            this.weatherControl5.WindSpeed = null;
             // 
-            // weatherControl14
+            // weatherControl4
             // 
-            this.weatherControl14.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.weatherControl14.Day = new System.DateTime(((long)(0)));
-            this.weatherControl14.Location = new System.Drawing.Point(410, 6);
-            this.weatherControl14.MaximumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl14.MaxTemperature = null;
-            this.weatherControl14.MinimumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl14.MinTemperature = null;
-            this.weatherControl14.Name = "weatherControl14";
-            this.weatherControl14.Precipitation = null;
-            this.weatherControl14.Size = new System.Drawing.Size(91, 302);
-            this.weatherControl14.TabIndex = 3;
-            this.weatherControl14.WindSpeed = null;
+            this.weatherControl4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.weatherControl4.Day = null;
+            this.weatherControl4.Location = new System.Drawing.Point(410, 6);
+            this.weatherControl4.MaximumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl4.MaxTemperature = null;
+            this.weatherControl4.MinimumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl4.MinTemperature = null;
+            this.weatherControl4.Name = "weatherControl4";
+            this.weatherControl4.Precipitation = null;
+            this.weatherControl4.Size = new System.Drawing.Size(91, 302);
+            this.weatherControl4.TabIndex = 3;
+            this.weatherControl4.WindSpeed = null;
             // 
-            // weatherControl13
+            // weatherControl3
             // 
-            this.weatherControl13.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.weatherControl13.Day = new System.DateTime(((long)(0)));
-            this.weatherControl13.Location = new System.Drawing.Point(313, 6);
-            this.weatherControl13.MaximumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl13.MaxTemperature = null;
-            this.weatherControl13.MinimumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl13.MinTemperature = null;
-            this.weatherControl13.Name = "weatherControl13";
-            this.weatherControl13.Precipitation = null;
-            this.weatherControl13.Size = new System.Drawing.Size(91, 302);
-            this.weatherControl13.TabIndex = 2;
-            this.weatherControl13.WindSpeed = null;
+            this.weatherControl3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.weatherControl3.Day = null;
+            this.weatherControl3.Location = new System.Drawing.Point(313, 6);
+            this.weatherControl3.MaximumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl3.MaxTemperature = null;
+            this.weatherControl3.MinimumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl3.MinTemperature = null;
+            this.weatherControl3.Name = "weatherControl3";
+            this.weatherControl3.Precipitation = null;
+            this.weatherControl3.Size = new System.Drawing.Size(91, 302);
+            this.weatherControl3.TabIndex = 2;
+            this.weatherControl3.WindSpeed = null;
             // 
-            // weatherControl12
+            // weatherControl2
             // 
-            this.weatherControl12.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.weatherControl12.Day = new System.DateTime(((long)(0)));
-            this.weatherControl12.Location = new System.Drawing.Point(216, 6);
-            this.weatherControl12.MaximumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl12.MaxTemperature = null;
-            this.weatherControl12.MinimumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl12.MinTemperature = null;
-            this.weatherControl12.Name = "weatherControl12";
-            this.weatherControl12.Precipitation = null;
-            this.weatherControl12.Size = new System.Drawing.Size(91, 302);
-            this.weatherControl12.TabIndex = 1;
-            this.weatherControl12.Tag = "";
-            this.weatherControl12.WindSpeed = null;
+            this.weatherControl2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.weatherControl2.Day = null;
+            this.weatherControl2.Location = new System.Drawing.Point(216, 6);
+            this.weatherControl2.MaximumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl2.MaxTemperature = null;
+            this.weatherControl2.MinimumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl2.MinTemperature = null;
+            this.weatherControl2.Name = "weatherControl2";
+            this.weatherControl2.Precipitation = null;
+            this.weatherControl2.Size = new System.Drawing.Size(91, 302);
+            this.weatherControl2.TabIndex = 1;
+            this.weatherControl2.Tag = "";
+            this.weatherControl2.WindSpeed = null;
             // 
-            // weatherControl11
+            // weatherControl1
             // 
-            this.weatherControl11.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.weatherControl11.Day = new System.DateTime(2021, 4, 14, 0, 0, 0, 0);
-            this.weatherControl11.Location = new System.Drawing.Point(119, 6);
-            this.weatherControl11.MaximumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl11.MaxTemperature = 11D;
-            this.weatherControl11.MinimumSize = new System.Drawing.Size(91, 302);
-            this.weatherControl11.MinTemperature = null;
-            this.weatherControl11.Name = "weatherControl11";
-            this.weatherControl11.Precipitation = null;
-            this.weatherControl11.Size = new System.Drawing.Size(91, 302);
-            this.weatherControl11.TabIndex = 0;
-            this.weatherControl11.WindSpeed = null;
+            this.weatherControl1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.weatherControl1.Day = null;
+            this.weatherControl1.Location = new System.Drawing.Point(119, 6);
+            this.weatherControl1.MaximumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl1.MaxTemperature = null;
+            this.weatherControl1.MinimumSize = new System.Drawing.Size(91, 302);
+            this.weatherControl1.MinTemperature = null;
+            this.weatherControl1.Name = "weatherControl1";
+            this.weatherControl1.Precipitation = null;
+            this.weatherControl1.Size = new System.Drawing.Size(91, 302);
+            this.weatherControl1.TabIndex = 0;
+            this.weatherControl1.WindSpeed = null;
             // 
             // MainForm
             // 
@@ -342,6 +344,8 @@
             this.ClientSize = new System.Drawing.Size(1089, 351);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.MaximumSize = new System.Drawing.Size(1105, 390);
+            this.MinimumSize = new System.Drawing.Size(1105, 390);
             this.Name = "MainForm";
             this.Text = "Погода";
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -364,16 +368,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private Components.WeatherControl weatherControl20;
-        private Components.WeatherControl weatherControl19;
-        private Components.WeatherControl weatherControl18;
-        private Components.WeatherControl weatherControl17;
-        private Components.WeatherControl weatherControl16;
-        private Components.WeatherControl weatherControl15;
-        private Components.WeatherControl weatherControl14;
-        private Components.WeatherControl weatherControl13;
-        private Components.WeatherControl weatherControl12;
-        private Components.WeatherControl weatherControl11;
+        private Components.WeatherControl weatherControl10;
+        private Components.WeatherControl weatherControl9;
+        private Components.WeatherControl weatherControl8;
+        private Components.WeatherControl weatherControl7;
+        private Components.WeatherControl weatherControl6;
+        private Components.WeatherControl weatherControl5;
+        private Components.WeatherControl weatherControl4;
+        private Components.WeatherControl weatherControl3;
+        private Components.WeatherControl weatherControl2;
+        private Components.WeatherControl weatherControl1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cityBox;
     }
