@@ -10,13 +10,11 @@ namespace GismeteoTest.Shared.Models
 {
     public class Weather
     {
-        public string WeatherType { get; set; }
-
         public double MaxTemp { get; set; }
 
         public double MinTemp { get; set; }
 
-        public DateTime Day { get; set; }
+        public string DateString { get; set; }
 
         public double MaxWindSpeed { get; set; }
 

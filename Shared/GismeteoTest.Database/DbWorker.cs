@@ -37,7 +37,7 @@ namespace GismeteoTest.Database
         /// <param name="data"></param>
         /// <returns></returns>
         /// <exception cref="Exception"></exception>
-        public async Task AddWeatherAsync(IEnumerable<WeatherData> data)
+        public async Task AddWeathersAsync(IEnumerable<WeatherData> data)
         {
             try
             {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GismeteoTest
 {
-    public static class Test
+    public static class HTMLGetter
     {
         public static async Task<string> GetHtmlPageSite(string url)
         {
@@ -17,20 +17,21 @@ namespace GismeteoTest
 
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 
-                HttpWebResponse response = (HttpWebResponse)(await request.GetResponseAsync());
-
-                if (response.StatusCode == HttpStatusCode.OK)
+                using (HttpWebResponse response = (HttpWebResponse)(await request.GetResponseAsync()))
                 {
-                    using (Stream responseStream = response.GetResponseStream())
+                    if (response.StatusCode == HttpStatusCode.OK)
                     {
-                        result = new StreamReader(responseStream).ReadToEnd();
+                        using (Stream responseStream = response.GetResponseStream())
+                        {
+                            result = new StreamReader(responseStream).ReadToEnd();
+                        }
                     }
+                    else
+                    {
+                        throw new Exception($"Не успешный статус страницы: { response.StatusCode }");
+                    }
+                    return result;
                 }
-                else
-                {
-                    throw new Exception($"Не успешный статус страницы: { response.StatusCode }");
-                }
-                return result;
             }
             catch
             {
